@@ -1,4 +1,13 @@
-.env
+node_modules/
+build/
+venv/
 __pycache__/
 *.pyc
-node_modules/
+.env
+*.db 
+.Ds_Store
+# Local Netlify folder
+.netlify
+
+.vercel
+.env*
