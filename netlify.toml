@@ -1,6 +1,6 @@
 [build]
-  command = "cd frontend && npm run build"
-  publish = "frontend/build"
+  command = "npm run build"
+  publish = "build"
 
 [build.environment]
-  REACT_APP_API_URL = "https://password-checker-sable-eta.vercel.app"
+  NODE_VERSION = "18"
