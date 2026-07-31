@@ -8,7 +8,7 @@ import Dashboard from './components/Dashboard';
 import './App.css';
 
 function App() {
-  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+  const API_URL = process.env.REACT_APP_API_URL || 'https://password-checker-sable-eta.vercel.app';
   
   const [currentView, setCurrentView] = useState('analyzer');
   const [password, setPassword] = useState('');
