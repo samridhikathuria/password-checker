@@ -23,9 +23,14 @@ def create_app(config_name=None):
     # Register blueprints
     from app.routes import api_bp
     app.register_blueprint(api_bp, url_prefix='/api')
-    
-    # Create tables
-    with app.app_context():
-        db.create_all()
-    
+
+    # Create tables only when needed
+    if os.getenv("CREATE_DB_TABLES") == "true":
+        with app.app_context():
+            db.create_all()
+
+    @app.route("/")
+    def home():
+        return "Password Checker Backend Running!"
+
     return app
